@@ -13,7 +13,7 @@ const initialState = {
     message: ''
 }
 
-console.log(user)
+// console.log(user)
 
 // Register user
 export const register = createAsyncThunk('auth/register', async (user, thunkAPI) => {
