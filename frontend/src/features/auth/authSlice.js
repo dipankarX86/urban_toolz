@@ -89,3 +89,5 @@ export const authSlice = createSlice({
 
 export const {reset} = authSlice.actions
 export default authSlice.reducer
+
+// auth slice has reducers and extraReducers not any reducer

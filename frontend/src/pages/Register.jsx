@@ -4,6 +4,9 @@ import {useNavigate} from 'react-router'
 import {toast} from 'react-toastify'
 import {FaUser} from 'react-icons/fa'
 import {register, reset} from '../features/auth/authSlice'  // Dis not understand the export from authSlice though
+                                                            //why import from authSlice, why not import from store?
+                                                            // that means somehow dispatch works for slice file
+                                                            // may depend where the reducer function is, in the store or in a slice
 import Spinner from '../components/Spinner'
 
 function Register() {
@@ -48,7 +51,7 @@ function Register() {
     // console.log(formData);
 
     if(password !== password2) {
-      toast.error('passwords do noyt match')
+      toast.error('passwords do not match')
     } else {
       const userData = {
         name, email, password
