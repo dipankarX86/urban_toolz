@@ -1,4 +1,5 @@
 // console.log('hello world')
+const path = require('path')
 const express = require('express')  // express is the backend web framework
 const colors = require('colors')
 const dotenv = require('dotenv').config()  // allows us to have a .env file at the root with our environment variables
@@ -19,6 +20,19 @@ app.use(express.urlencoded({extended: false}))
 // })
 app.use('/api/goals', require('./routes/goalRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
+
+//  Serve frontend
+if(process.env.NODE_ENVIRONMENT === 'production') {
+    app.use(express.static(path.join(__dirname, '../frontend/build')))
+
+    app.get('*', (req, res) => 
+        res.sendFile(
+            path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
+        )
+    )
+} else {
+    app.get('/', (req, res) => res.send('Please set to production'))
+}
 
 app.use(errorHandler)
 
