@@ -26,13 +26,13 @@ app.get('/', (req, res) => res.render('index'));
 app.use('/api/goals', require('./routes/goalRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
 
-//  Serve frontend
+//  Serve dashboard
 if(process.env.NODE_ENVIRONMENT === 'production') {
-    app.use('/', express.static(path.join(__dirname, '../frontend/build')))
+    app.use('/', express.static(path.join(__dirname, '../dashboard/build')))
 
     app.get('/dashboard*', (req, res) => 
         res.sendFile(
-            path.resolve(__dirname, '../', 'frontend', 'build', 'index.html')
+            path.resolve(__dirname, '../', 'dashboard', 'build', 'index.html')
         )
     )
 } else {

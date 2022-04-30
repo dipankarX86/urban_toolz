@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node api/server.js",
     "server": "nodemon api/server.js",
-    "client": "npm start --prefix frontend",
+    "client": "npm start --prefix dashboard",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Brad Treversy",
