@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended: false}))
 app.use('/api/goals', require('./routes/goalRoutes'))
 app.use('/api/users', require('./routes/userRoutes'))
 
-//app.use('/', express.static(path.join(__dirname, 'public')))    // this dont need to be static in express
+app.use('/', express.static(path.join(__dirname, 'public')))    // this dont need to be static in express
                                                                 // just learn, how to access individual pages or pages 
                                                                 // through function in express router
                                                                 // read on express router more
