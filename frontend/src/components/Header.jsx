@@ -11,13 +11,13 @@ function Header() {
     const onLogout = () => {
         dispatch(logout())
         dispatch(reset())
-        navigate('/')
+        navigate('/dashboard')
     }
 
   return (
     <header className='header'>
         <div className="logo">
-            <Link to='/'>Goal Setter</Link>
+            <Link to='/dashboard'>Goal Setter</Link>
         </div>
         <ul>
             {user ? (
@@ -29,12 +29,12 @@ function Header() {
             ) : (
                 <>
                     <li>
-                        <Link to='/login'>
+                        <Link to='/dashboard/login'>
                             <FaSignInAlt /> Login
                         </Link>
                     </li>
                     <li>
-                        <Link to='/register'>
+                        <Link to='/dashboard/register'>
                             <FaUser /> Register
                         </Link>
                     </li>
