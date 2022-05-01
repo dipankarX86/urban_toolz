@@ -1,1 +1,11 @@
-Members
+
+{{> header}}
+
+<h4>Goals</h4>
+<ul class="list-group">
+    {{#each goals}}
+        <li class="list-group-item">{{this.text}}</li>
+    {{/each}}
+</ul>
+
+{{> footer}}
