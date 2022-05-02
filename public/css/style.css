@@ -1,7 +1,24 @@
-.red-border {
-    border: 1px solid red;
-}
 
 .orange-border {
-    border: 1px solid orange;
+    border: 0px solid orange;
+}
+
+/* for the home page */
+.dc-category {
+    background: #ccc;
+    margin-top: 16px;
+    width: auto;
+    height: 160px;
+}
+
+/*  */
+.dc-how-it-works {
+    background: #ccc;
+    margin-top: 16px;
+    width: auto;
+    height: 500px;
+}
+
+.dc-dark {
+    background: #888;
 }

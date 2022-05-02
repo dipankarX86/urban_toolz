@@ -13,7 +13,7 @@
     <div
     class="p-5 text-center bg-image"
     style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
-        height: 400px;
+        height: 600px;
         margin-top: 8px;">
         <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
             <div class="d-flex justify-content-center align-items-center h-100">
@@ -29,58 +29,29 @@
 </header>
 
 <div class="container">
-    
+
     <div class="row mt-4">
-        <div class="col-md orange-border">
-            One of three columns
-        </div>
-        <div class="col-md orange-border">
-            One of three columns
-        </div>
-        <div class="col-md orange-border">
-            One of three columns
-        </div>
+        {{#each goals}}
+            <div class="col-md col-md-4 orange-border">
+                <div class="dc-category">{{this.text}}</div>
+            </div>
+        {{/each}}
     </div>
-    <div class="row orange-border">
-        <div class="col-md">
-            One of three columns
+    <div class="row mt-4">
+        <div class="col-md col-md-4"></div>
+        <div class="col-md col-md-4 d-flex justify-content-center">
+            <button type="button" class="btn btn-lg btn-success">More Services</button>
         </div>
-        <div class="col-md">
-            One of three columns
-        </div>
-        <div class="col-md">
-            One of three columns
-        </div>
+        <div class="col-md col-md-4"></div>
     </div>
-    <div class="row">
-        <div class="col-md orange-border">
-            One of three columns
-        </div>
-        <div class="col-md orange-border">
-            One of three columns
-        </div>
-        <div class="col-md orange-border">
-            One of three columns
-        </div>
-    </div>
-    <div class="row orange-border">
-        <div class="col-md">
-            One of three columns
-        </div>
-        <div class="col-md">
-            One of three columns
-        </div>
-        <div class="col-md">
-            One of three columns
-        </div>
-    </div>
+    <hr>
 
     <div class="row mt-4">
         <div class="col-md orange-border">
-            One of three columns
+            <div class="dc-how-it-works dc-dark">video</div>
         </div>
         <div class="col-md orange-border">
-            One of three columns
+            <div class="dc-how-it-works">details</div>
         </div>
     </div>
 

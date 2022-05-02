@@ -24,15 +24,20 @@ app.use('/', express.static(path.join(__dirname, '../public')))
 //retrieve all goals
 const goalsAll = async (req, res) => {
     const goals = await Goal.find().lean()
-    return goals
+    var goalsNew = [];
+    for (let index = 0; index < 6; index++) {
+        goalsNew.push(goals[index]);
+    }
+    // console.log(goalsNew)
+    return goalsNew
 }
 //
 // homepage route
 app.get('/', async (req, res) => res.render('index'
-    // , {
-    //     title: 'All Goals',
-    //     goals: await goalsAll()
-    // }
+    , {
+        title: 'All Goals',
+        goals: await goalsAll()
+    }
 ));
 // other routes
 app.get('/nearbyStores', async (req, res) => res.render('nearbyStores'));
