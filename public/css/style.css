@@ -1,6 +1,6 @@
 
 .orange-border {
-    border: 0px solid orange;
+    border: 1px solid orange;
 }
 
 /* for the home page */
@@ -13,12 +13,13 @@
 
 /*  */
 .dc-how-it-works {
-    background: #ccc;
     margin-top: 16px;
     width: auto;
-    height: 500px;
+    min-height: 400px;
 }
-
 .dc-dark {
     background: #888;
+}
+.dc-light {
+    background: #eee;
 }
