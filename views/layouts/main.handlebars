@@ -35,7 +35,11 @@
   <body>
       {{!-- mt-4 is not required in case of fixed-top navbar --}}
       <div class="container">
+          {{> header}}  
+          {{!-- brought from index --}}
           {{{body}}}
+          {{> footer}}
+          {{!-- brought from index --}}
       </div>
       
       <!-- bootstrap js -->
