@@ -19,7 +19,7 @@
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        <a class="navbar-brand mt-2 mt-lg-0" href="/">
           <img
             src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
             height="15"
@@ -30,13 +30,16 @@
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">DCleans Near You</a>
+            <a class="nav-link" href="/nearbyStores">DCleans Near You</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Business Opportunity</a>
+            <a class="nav-link" href="/howItWorks">How It Works</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Price List</a>
+            <a class="nav-link" href="/businessOpportunity">Business Opportunity</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/priceList">Price List</a>
           </li>
           <li class="dropdown">
             <a
@@ -48,12 +51,12 @@
               aria-expanded="false">
               Download
             </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> {{!-- removed dropdown-menu-end from class --}}
               <li>
-                <a class="dropdown-item" href="#">Install Mobile App</a>
+                <a class="dropdown-item" href="/installMobileApp">Install Mobile App</a>
               </li>
               <li>
-                <a class="dropdown-item" href="#">Download Desktop App</a>
+                <a class="dropdown-item" href="/downloadDesktopApp">Download Desktop App</a>
               </li>
             </ul>
           </li>
@@ -71,9 +74,9 @@
             Account
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Sign In</a></li>
+            <li><a class="dropdown-item" href="/dashboard/login">Sign In</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Register</a></li>
+            <li><a class="dropdown-item" href="/dashboard/register">Register</a></li>
           </ul>
         </div>
 
@@ -152,27 +155,4 @@
   </nav>
   <!-- Navbar -->
   <!-- Navbar -->
-
-  <!-- Background image -->
-  <div
-    class="p-5 text-center bg-image"
-    style="
-      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
-      height: 400px;
-      margin-top: 8px;
-    "
-  >
-    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-white">
-          <h1 class="mb-3">Heading</h1>
-          <h4 class="mb-3">Subheading</h4>
-          <a class="btn btn-outline-light btn-lg" href="#!" role="button"
-          >Call to action</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Background image -->
 </header>

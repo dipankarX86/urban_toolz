@@ -13,6 +13,7 @@ function App() {
         <div className="container">
           <Header />
           <Routes>
+            {/* <Route path='/' element={() => {window.location.replace('https://example.com/1234');return null;}} /> */}
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/dashboard/login' element={<Login />} />
             <Route path='/dashboard/register' element={<Register />} />

@@ -28,10 +28,19 @@ const goalsAll = async (req, res) => {
 }
 //
 // homepage route
-app.get('/', async (req, res) => res.render('index', {
-    title: 'All Goals',
-    goals: await goalsAll()
-}));
+app.get('/', async (req, res) => res.render('index'
+    // , {
+    //     title: 'All Goals',
+    //     goals: await goalsAll()
+    // }
+));
+// other routes
+app.get('/nearbyStores', async (req, res) => res.render('nearbyStores'));
+app.get('/howItWorks', async (req, res) => res.render('howItWorks'));
+app.get('/businessOpportunity', async (req, res) => res.render('businessOpportunity'));
+app.get('/priceList', async (req, res) => res.render('priceList'));
+app.get('/downloadDesktopApp', async (req, res) => res.render('downloadDesktopApp'));
+app.get('/installMobileApp', async (req, res) => res.render('installMobileApp'));
 
 //
 // Body parser Middleware
