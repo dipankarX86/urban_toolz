@@ -44,8 +44,7 @@ app.get('/nearbyStores', async (req, res) => res.render('nearbyStores'));
 app.get('/howItWorks', async (req, res) => res.render('howItWorks'));
 app.get('/businessOpportunity', async (req, res) => res.render('businessOpportunity'));
 app.get('/priceList', async (req, res) => res.render('priceList'));
-// app.get('/downloadDesktopApp', async (req, res) => res.render('downloadDesktopApp'));
-app.get('/installMobileApp', async (req, res) => res.render('installMobileApp'));
+app.get('/downloads', async (req, res) => res.render('downloads'));
 
 //
 // Body parser Middleware
