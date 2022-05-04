@@ -1,1 +1,25 @@
-Nearby stores
+
+<div class="container">
+    <!-- how it works -->
+    <div class="row g-0 mt-3 mb-3">
+
+        <div class="col-md col-md-4">
+            <div class="dc-downloads">
+                <h3>DCleans Stores Near You</h3>
+                <hr>
+                <ul class="list-group list-group-flush">
+                    {{#each stores}}
+                        <li class="list-group-item">{{this.name}}: {{this.address}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md col-md-8">
+            <div class="dc-map-container text-center">
+                <div class="dc-map-box"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

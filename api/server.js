@@ -6,16 +6,23 @@ const dotenv = require('dotenv').config()  // allows us to have a .env file at t
 const {errorHandler} = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
 const port = process.env.port || 5000
-//
+
+
+// ****
 // for MPA frontend landing page some testing
 const exphbs = require('express-handlebars');
-const Goal = require('./models/goalModel')
-//
+const Goal = require('./models/goalModel');
+const stores = require('./models/storesModel');  // currently no real store model exists, later change stores to Stores
+// stores model need to be modified later
+// ****
+
+
 //this part is required for anything to work before anything
 connectDB()
 const app = express()
 
-//
+
+// ****
 // handlebar middleware
 app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));  // I had to add .engine to exphbs
 app.set('view engine', 'handlebars');
@@ -40,13 +47,14 @@ app.get('/', async (req, res) => res.render('index'
     }
 ));
 // other routes
-app.get('/nearbyStores', async (req, res) => res.render('nearbyStores'));
+app.get('/nearbyStores', async (req, res) => res.render('nearbyStores', {stores}));
 app.get('/howItWorks', async (req, res) => res.render('howItWorks'));
 app.get('/businessOpportunity', async (req, res) => res.render('businessOpportunity'));
 app.get('/priceList', async (req, res) => res.render('priceList'));
 app.get('/downloads', async (req, res) => res.render('downloads'));
+// ****
 
-//
+
 // Body parser Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
