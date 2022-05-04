@@ -1,0 +1,65 @@
+
+<div class="container mt-2 mb-2">
+    <h1 class="text-center">Categories and Services</h1>
+    <hr>
+    
+    <form action="/sendAppLink" method="POST" class="mb-4">
+        <div class="row g-2">
+            <div class="col-md col-md-4">
+                <div class="form-group">
+                    <label for="name">State</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+            </div>
+            <div class="col-md col-md-4">
+                <div class="form-group">
+                    <label for="name">City</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+            </div>
+            <div class="col-md col-md-4">
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-md btn-success mt-4" type="button">Find Services</button>
+                    <!-- will find location and city by default, if not allowed will show default and all categories -->
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div class="row">
+        <div class="col-md text-center">
+            <div class="dc-services-container">
+                {{!-- <div class="dc-services-box"></div> --}}
+                <h3 class="text-center mt-2">Popular Services</h3>
+                <hr>
+                
+                <div class="row mt-4">
+                    {{#each goals}}
+                        <div class="col-md col-md-4">
+                            <div class="dc-category">{{this.text}}</div>
+                        </div>
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md text-center">
+            <div class="dc-services-container">
+                {{!-- <div class="dc-services-box"></div> --}}
+                <h3 class="text-center mt-2">All Categories</h3>
+                <hr>
+                
+                <div class="row mt-4">
+                    {{#each goals}}
+                        <div class="col-md col-md-4">
+                            <div class="dc-category">{{this.text}}</div>
+                        </div>
+                    {{/each}}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

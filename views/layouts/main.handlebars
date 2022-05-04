@@ -34,13 +34,13 @@
   </head>
   <body>
       {{!-- mt-4 is not required in case of fixed-top navbar --}}
+      {{> header}}  
+      {{!-- brought from index --}}
       <div class="container">
-          {{> header}}  
-          {{!-- brought from index --}}
           {{{body}}}
-          {{> footer}}
-          {{!-- brought from index --}}
       </div>
+      {{> footer}}
+      {{!-- brought from index --}}
       
       <!-- bootstrap js -->
       {{!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 

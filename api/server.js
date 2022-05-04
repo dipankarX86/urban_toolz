@@ -50,7 +50,12 @@ app.get('/', async (req, res) => res.render('index'
 app.get('/nearbyStores', async (req, res) => res.render('nearbyStores', {stores}));
 app.get('/howItWorks', async (req, res) => res.render('howItWorks'));
 app.get('/businessOpportunity', async (req, res) => res.render('businessOpportunity'));
-app.get('/priceList', async (req, res) => res.render('priceList'));
+app.get('/services', async (req, res) => res.render('services'
+    , {
+        title: 'All Goals',
+        goals: await goalsAll()
+    }
+));
 app.get('/downloads', async (req, res) => res.render('downloads'));
 // ****
 

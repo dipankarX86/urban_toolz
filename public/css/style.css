@@ -88,3 +88,17 @@
     width: 100%;
     background: #ccc;
 }
+
+/* services box */
+.dc-services-container {
+    min-height: 100px;
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+/* .dc-services-box {
+    min-height: 100px;
+    width: 100%;
+    border: 1px solid #eee;
+} */
