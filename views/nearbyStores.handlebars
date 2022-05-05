@@ -45,10 +45,27 @@
         </form>
     </div>
 
-    <div class="row g-0 mb-3 mt-2">
+    <div class="row g-0 mb-3 mt-2 text-center">
         <div class="col-md col-md-4">
             <div class="dc-downloads">
                 <ul class="list-group list-group-flush">
+                    <h4>Within 1km radius</h4>
+                    {{#each stores}}
+                        <li class="list-group-item">{{this.name}}: {{this.address}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="dc-downloads">
+                <ul class="list-group list-group-flush">
+                    <h4>Within 5km radius</h4>
+                    {{#each stores}}
+                        <li class="list-group-item">{{this.name}}: {{this.address}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="dc-downloads">
+                <ul class="list-group list-group-flush">
+                    <h4>Within 20km radius</h4>
                     {{#each stores}}
                         <li class="list-group-item">{{this.name}}: {{this.address}}</li>
                     {{/each}}
