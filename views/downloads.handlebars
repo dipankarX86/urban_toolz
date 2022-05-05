@@ -1,0 +1,45 @@
+
+<div class="container">
+
+    <!-- how it works -->
+    <div class="row g-0 mt-3 mb-3">
+        <div class="col-md">
+            <div class="dc-downloads text-center">
+                <h1 class="mb-3">Install DCleans App</h1>
+                <img src="./images/downloads.png" alt="">
+            </div>
+        </div>
+        <div class="col-md">
+            <div class="dc-downloads dc-mt-100">
+                <!-- Send link to phone number or email -->
+                <h2 class="text-center mb-3">Send Link to phone</h2>
+                <form action="/sendAppLink" method="POST" class="mb-4">
+                    <div class="form-group">
+                        <label for="name">Phone</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                    <div class="d-grid gap-2 mt-3">
+                        <button type="submit" class="btn btn-lg btn-success" type="button">Send App Link</button>
+                    </div>
+                </form>
+                <hr>
+
+                <div class="text-center">
+                    <!-- or <br> Send link via email <hr> -->
+                    Or, <br>
+                    <button type="submit" class="btn btn-sm btn-info" type="button">Send link via email</button>
+                </div>
+                <hr>
+
+            </div>
+            <div class="dc-downloads">
+                Or, find in app stores: <br>
+            </div>
+            <div class="dc-downloads text-center">
+                <div class="dc-app-store dc-light shadow">Google Play Store</div>
+                <div class="dc-app-store dc-dark shadow">Apple App Store</div>
+            </div>
+        </div>
+    </div>
+
+</div>

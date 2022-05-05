@@ -1,0 +1,64 @@
+<div class="container">
+    <!-- how it works -->
+    {{!-- <div class="row g-2">
+        <div class="col-md text-center">
+            <div class="dc-services-container pt-2">
+                <h3>DCleans Stores Near You</h3>
+            </div>
+        </div>
+        <div class="col-md col-md-8 text-center">
+            <div class="dc-services-container">
+                <div class="dc-services-box"></div>
+            </div>
+        </div>
+    </div> --}}
+
+    <div class="row g-2 mt-2">
+        <form action="/sendAppLink" method="POST" class="mb-4">
+            <div class="row g-2">
+
+                <div class="col-md col-md-4 text-center">
+                    <div class="pt-4">
+                        <h3>DCleans Stores Near You</h3>
+                    </div>
+                </div>
+
+                <div class="col-md col-md-3">
+                    <div class="form-group">
+                        <label for="name">State</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md col-md-3">
+                    <div class="form-group">
+                        <label for="name">City</label>
+                        <input type="text" name="name" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md col-md-2">
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-md btn-success mt-4" type="button">Find Services</button>
+                        <!-- will find location and city by default, if not allowed will show default and all categories -->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row g-0 mb-3">
+        <div class="col-md col-md-4">
+            <div class="dc-downloads">
+                <ul class="list-group list-group-flush">
+                    {{#each stores}}
+                        <li class="list-group-item">{{this.name}}: {{this.address}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md col-md-8">
+            <div class="dc-map-container text-center">
+                <div class="dc-map-box"></div>
+            </div>
+        </div>
+    </div>
+</div>

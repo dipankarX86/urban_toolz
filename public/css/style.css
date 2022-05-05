@@ -1,0 +1,104 @@
+
+.orange-border {
+    border: 1px solid orange;
+}
+
+/* backgrounds */
+.dc-dark {
+    background: #888;
+}
+.dc-light {
+    background: #eee;
+}
+.dc-xdark {
+    background: #444;
+}
+.dc-xlight {
+    background: #fff;
+}
+
+.dc-bopp {
+    background: #7be;
+    padding-top: 10px;
+}
+
+/* margin top */
+.dc-mt-100 {
+    margin-top: 100px;
+}
+.dc-mt-200 {
+    margin-top: 200px;
+}
+.dc-mt-300 {
+    margin-top: 300px;
+}
+
+/* margin bottom */
+.dc-mb-100 {
+    margin-bottom: 100px;
+}
+.dc-mb-200 {
+    margin-bottom: 200px;
+}
+.dc-mb-300 {
+    margin-bottom: 300px;
+}
+
+/* for the home page */
+.dc-category {
+    background: #ccc;
+    margin-top: 16px;
+    width: auto;
+    height: 160px;
+}
+
+/* how-it-works */
+.dc-how-it-works {
+    margin-top: 16px;
+    width: auto;
+    min-height: 400px;
+}
+
+
+/* NON HOME PAGES */
+/* downloads */
+.dc-downloads {
+    /* border: 1px solid #eee; */
+    margin: 5px;
+    padding: 10px;
+}
+/* app-store */
+.dc-app-store {
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    height: 70px;
+    width: 160px;
+    border-radius: 5px;
+}
+
+/* map box */
+.dc-map-container {
+    border: 1px solid #eee;
+    margin: 5px;
+}
+.dc-map-box {
+    /* min-height: 300px; */
+    height: 600px;
+    width: 100%;
+    background: #ccc;
+}
+
+/* services box */
+.dc-services-container {
+    min-height: 100px;
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+/* .dc-services-box {
+    min-height: 100px;
+    width: 100%;
+    border: 1px solid #eee;
+} */

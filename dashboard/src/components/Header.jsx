@@ -17,7 +17,13 @@ function Header() {
   return (
     <header className='header'>
         <div className="logo">
-            <Link to='/dashboard'>Goal Setter</Link>
+            {/* <Link to='/dashboard'>Goal Setter</Link> */}
+            {user ? (
+                <Link to='/dashboard'>Goal Setter</Link>
+            ) : (
+                // <Link to='/'>Goal Setter</Link>
+                <a href={'/'}>Goal Setter</a>
+            )}
         </div>
         <ul>
             {user ? (
