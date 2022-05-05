@@ -7,21 +7,24 @@ const {errorHandler} = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
 const port = process.env.port || 5000
 
-
-// ****
-// for MPA frontend landing page some testing
-const exphbs = require('express-handlebars');
-const Goal = require('./models/goalModel');
-const stores = require('./models/storesModel');  // currently no real store model exists, later change stores to Stores
-// stores model need to be modified later
-// ****
-
-
-//this part is required for anything to work before anything
+// this part is required for anything to work before anything
+// handlebar and express rest api both need it, 
+// so, cannot move it bellow handlebars part
 connectDB()
 const app = express()
 
 
+
+
+// HANDLEBARS
+// for MPA frontend landing page some testing
+// ****
+const Goal = require('./models/goalModel');
+const stores = require('./models/storesModel');
+// so far goal and stores are only used by handlebars, so no matters
+// currently no real store model exists, later change stores to Stores
+// stores model need to be modified later
+const exphbs = require('express-handlebars');
 // ****
 // handlebar middleware
 app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));  // I had to add .engine to exphbs
@@ -35,7 +38,6 @@ const goalsAll = async (req, res) => {
     for (let index = 0; index < 6; index++) {
         goalsNew.push(goals[index]);
     }
-    // console.log(goalsNew)
     return goalsNew
 }
 //
@@ -60,6 +62,9 @@ app.get('/downloads', async (req, res) => res.render('downloads'));
 // ****
 
 
+
+
+// REST API
 // Body parser Middleware
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))

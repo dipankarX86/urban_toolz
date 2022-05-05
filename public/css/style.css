@@ -1,3 +1,6 @@
+/* body {
+    overflow-anchor: none;
+} */
 
 .orange-border {
     border: 1px solid orange;
@@ -18,7 +21,7 @@
 }
 
 .dc-bopp {
-    background: #7be;
+    /* background: #eee; */
     padding-top: 10px;
 }
 
@@ -80,10 +83,9 @@
 /* map box */
 .dc-map-container {
     border: 1px solid #eee;
-    margin: 5px;
+    /* margin: 5px; */
 }
 .dc-map-box {
-    /* min-height: 300px; */
     height: 600px;
     width: 100%;
     background: #ccc;
@@ -93,7 +95,7 @@
 .dc-services-container {
     min-height: 100px;
     width: 100%;
-    border: 1px solid #eee;
+    /* border: 1px solid #eee; */
     padding: 5px;
     margin-bottom: 10px;
 }
@@ -102,3 +104,10 @@
     width: 100%;
     border: 1px solid #eee;
 } */
+
+
+.dc-howItWorks-container {
+    margin-top: 16px;
+    width: auto;
+    min-height: 400px;
+}
