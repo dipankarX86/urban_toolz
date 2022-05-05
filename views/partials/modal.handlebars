@@ -1,0 +1,55 @@
+<!-- Button trigger modal -->
+<!--
+<button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
+  Launch demo modal
+</button>
+-->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Install the App</h3>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          
+        <div class="dc-downloads dc-mt-100">
+            <!-- Send link to phone number or email -->
+            <h4 class="text-center mb-3">Send Link to phone</h4>
+            <form action="/sendAppLink" method="POST" class="mb-4">
+                <div class="form-group">
+                    <label for="name">Phone</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <div class="d-grid gap-2 mt-3">
+                    <button type="submit" class="btn btn-lg btn-success" type="button">Send App Link</button>
+                </div>
+            </form>
+            <hr>
+
+            <div class="text-center">
+                <!-- or <br> Send link via email <hr> -->
+                Or, <br>
+                <button type="submit" class="btn btn-sm btn-info" type="button">Send link via email</button>
+            </div>
+            <hr>
+
+        </div>
+        {{!-- <div class="dc-downloads">
+            Or, find in app stores: <br>
+        </div> --}}
+        <div class="dc-downloads text-center">
+            <div class="dc-app-store dc-light shadow">Google Play Store</div>
+            <div class="dc-app-store dc-dark shadow">Apple App Store</div>
+        </div>
+
+      </div>
+      {{!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" style="margin: auto" data-mdb-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> --}}
+    </div>
+  </div>
+</div>
