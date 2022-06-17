@@ -23,6 +23,7 @@ function Register() {
   const dispatch = useDispatch()
 
   const {user, isLoading, isError, isSuccess, message} = useSelector((state) => state.auth)
+      // need to check if changing the above names to user1, isLoading1, isError1, isSuccess1 & message1 so that we can call useSelector twice is valid
 
   // use effect function call
   useEffect(() => {
@@ -51,10 +52,10 @@ function Register() {
     // console.log(formData);
 
     if(password !== password2) {
-      toast.error('passwords do not match')
+      toast.error('passwords do not match')  // password validation in react, there should be better way of doing it
     } else {
       const userData = {
-        name, email, password
+        name, email, password   // surprisingly these are the same data defined and copied from formData above(in and around line 20)
       }
 
       dispatch(register(userData))
